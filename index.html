@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MyTodo List</title>
+    <link rel="stylesheet" type="text/css" href="node_modules/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="node_modules/jquery-datetimepicker/jquery.datetimepicker.css">
+    <link rel="stylesheet" type="text/css" href="less/base.css">
+    <link rel="stylesheet" type="text/css" href="less/index.css">  
+</head>
+<body>
+	<div class="inform_msg">
+		<p class="msg"></p>
+		<button type="button" class="btn btn-default inform_btn">知道了</button>
+		<video class="inform_video" src="alert.mp3" style="display: none;"></video>
+	</div>
+	<h2 class="list-title">My Todo</h2>
+	<div class="list-content">
+		<div class="container-fluid">
+			<!-- 输入框部分 -->
+			<form class="row list-enter">
+				<div class="col-xs-10 form-group" style="padding-left:0;">
+				    <input type="text" class="form-control" id="input_field" style="height:100%;">
+				</div>
+				<div class="col-xs-2 list-submit">
+					<button type="submit" class="btn btn-primary">Submit</button>
+				</div>
+		    </form>
+		    <!-- 列表部分 -->
+		    <ul class="list-group list-contain">
+			</ul>
+		</div>		
+	</div>
+
+	<!--详细信息页模态框-->
+	<div class="modal fade" id="detail_model" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		<div class="modal-dialog" role="document">
+		   <div class="modal-content">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		        <h4 class="modal-title" id="myModalLabel">
+		        	<input type="text" class="form-control detail_input" style="height:45px;background: #EEEDEF;font-size: 18px;">
+		        </h4>
+		      </div>
+		      <div class="modal-body">
+		        <textarea class="form-control detail_intro" rows="5" style="background:#DDDCDD;"></textarea>
+		        <h4>提醒时间</h4>
+		        <input type="text" class="form-control datetime" style="height:45px;background:#DDDCDD;">
+		      </div>
+		      <div class="modal-footer clearfix">
+		        <button type="button" class="btn btn-lg btn-refresh" data-dismiss="modal" style="float: left;background: #46B2E5;font-size: 18px;">更新</button>
+		      </div>
+		   </div>
+		</div>
+    </div>
+
+    <!-- 删除列表项弹出框 -->
+    <div class="modal fade" id="delete_model" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		<div class="modal-dialog" role="document">
+		   <div class="modal-content delete-content">
+		      <div class="modal-header delete-header">
+		        <h4 style="text-align: center;font-size: 24px;font-style: bold;">确定删除？</h4>
+		      </div>
+		      <div class="modal-footer delete-footer">
+		        <button type="button" class="btn btn-lg btn-sure" data-dismiss="modal" style="background: #46B2E5;font-size: 18px;">确定</button>
+		        <button type="button" class="btn btn-default btn-lg" data-dismiss="modal" style="font-size: 18px;background: #DDDCDD;">取消</button>
+		      </div>
+		   </div>
+		</div>
+    </div>
+
+
+<script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript" src="node_modules/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="node_modules/store/store.min.js"></script>
+<script type="text/javascript" src="node_modules/jquery-datetimepicker/build/jquery.datetimepicker.full.min.js"></script>
+<script type="text/javascript" src="js/base.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+</body>
+</html>

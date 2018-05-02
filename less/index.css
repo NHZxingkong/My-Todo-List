@@ -1,0 +1,94 @@
+.inform_msg {
+  display: none;
+  text-align: center;
+  background: #ffe264;
+  padding: 10px;
+  color: #333;
+}
+.inform_msg .msg {
+  font-size: 16px;
+}
+.list-title {
+  max-width: 600px;
+  margin: 80px auto 50px auto;
+  font-size: 28px;
+  color: #fff;
+  text-align: center;
+}
+.list-content {
+  max-width: 700px;
+  margin: 0 auto;
+}
+.list-content .list-enter {
+  margin: 20px 0;
+  height: 45px;
+}
+.list-content .list-enter div {
+  height: 100%;
+}
+.list-content .list-enter .list-submit {
+  padding-right: 0;
+  margin-left: -25px;
+}
+.list-content .list-enter .list-submit button {
+  height: 100%;
+  font-size: 20px;
+}
+.list-content .list-contain li {
+  border-radius: 5px;
+  margin-bottom: 5px;
+  font-size: 16px;
+}
+.list-content .list-contain li:hover {
+  background: #DDDCDD;
+}
+.list-content .list-contain li span {
+  display: inline-block;
+  vertical-align: top;
+  color: #3A383A;
+  margin-left: 8px;
+}
+.list-content .list-contain li.completed {
+  position: relative;
+}
+.list-content .list-contain li.completed span {
+  color: #aaa;
+}
+.list-content .list-contain li.completed::before {
+  content: '';
+  position: absolute;
+  height: 1px;
+  width: 94%;
+  top: 20px;
+  left: 34px;
+  background: #aaa;
+}
+.list-content .list-contain li.single-item {
+  cursor: pointer;
+}
+.list-content .list-contain li .list-item-btn {
+  display: inline-block;
+  float: right;
+}
+.list-content .list-contain li .list-item-btn a {
+  color: #8C8A8C;
+  text-decoration: none;
+  margin-right: 3px;
+}
+.list-content .list-contain li .list-item-btn a:hover {
+  color: #46B2E5;
+}
+@media (min-width: 768px) {
+  .delete-content {
+    max-width: 360px;
+    margin: 180px auto;
+  }
+  .delete-content .delete-header,
+  .delete-content .delete-footer {
+    border: 0;
+    text-align: center;
+  }
+  .delete-content .delete-header {
+    padding-bottom: 0px;
+  }
+}
